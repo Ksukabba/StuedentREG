@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KSU Kabba - Student Registration</title>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<header><div class="hd">
+<img src="assets/logo.jpg" alt="Kogi State University, Kabba logo">
+<div><h1>Kogi State University, Kabba</h1>
+<h2>Students Registration Form 2026/2027</h2></div>
+</div></header>
+<main>
+<section id="loginPage" class="card">
+<h3>Student Login</h3>
+<form id="lf" novalidate>
+<label for="jamb">JAMB Registration Number</label>
+<input id="jamb" maxlength="14" autocapitalize="characters" autocomplete="off" placeholder="Enter your JAMB registration number">
+<div class="err" id="jerr"></div>
+<div class="note">You can only fill this form once with one JAMB registration number.</div>
+<button type="submit" id="lbtn">Continue</button>
+</form>
+<div class="or">Applying through Direct Entry?</div>
+<button type="button" id="toDe" class="alt">Direct Entry Login</button>
+</section>
+<section id="dePage" class="card">
+<h3>Direct Entry Login</h3>
+<form id="df" novalidate>
+<label for="jambDe">JAMB Registration Number</label>
+<input id="jambDe" maxlength="14" autocapitalize="characters" autocomplete="off" placeholder="Enter your JAMB registration number">
+<div class="err" id="derr"></div>
+<div class="note">You can only fill this form once with one JAMB registration number.</div>
+<button type="submit" id="dbtn">Continue</button>
+</form>
+<button type="button" id="toUtme" class="link">Back to login options</button>
+</section>
+<div id="formPage">
+<div class="jamb" id="jambTag"></div>
+<form id="f" novalidate>
+<div id="step1">
+<div class="docs-h" style="margin-top:0">Page 2 of 3: Your details</div>
+<label for="surname">Surname</label><input id="surname" autocomplete="family-name"><div class="err"></div>
+<label for="otherNames">Other Names</label><input id="otherNames" autocomplete="given-name"><div class="err"></div>
+<label for="dob">Date of Birth</label><input id="dob" type="date"><div class="err"></div>
+<label for="gender">Gender</label><select id="gender"><option value="">Select gender</option><option>Male</option><option>Female</option></select><div class="err"></div>
+<label for="state">State of Origin</label><select id="state"><option value="">Select state</option></select><div class="err"></div>
+<label for="lga">Local Government Area</label><select id="lga" disabled><option value="">Select state first</option></select><div class="err"></div>
+<label for="phone">Phone Number</label><input id="phone" type="tel" inputmode="numeric" maxlength="11" placeholder="08012345678" autocomplete="tel"><div class="err"></div>
+<label for="email">Email</label><input id="email" type="email" placeholder="name@example.com" autocomplete="email"><div class="err"></div>
+<label for="programme">Programme</label><select id="programme"><option value="">Select programme</option><option>Computer Science</option><option>Cyber Security</option></select><div class="err"></div>
+<label for="matric">Matric Number <small>(Optional)</small></label><input id="matric" autocapitalize="characters"><div class="err"></div>
+<label for="guardian">Guardian Contact <small>(11-digit phone number)</small></label><input id="guardian" type="tel" inputmode="numeric" maxlength="11" placeholder="08012345678"><div class="err"></div>
+<button type="button" id="next">Next: Upload documents</button>
+</div>
+<div id="step2">
+<div class="docs-h" style="margin-top:0">Page 3 of 3: Upload your documents</div>
+<div class="note">Each file must be 1MB or less (PDF, JPG or PNG). Large photos are reduced automatically.</div>
+<div id="docs"></div>
+<button type="submit" id="btn">Submit registration</button>
+<button type="button" id="back" class="link">Back to details</button>
+</div>
+<div class="err" id="top" style="text-align:center;margin-top:10px"></div>
+</form>
+<div id="done"><h3>Registration submitted</h3><p>Your details have been received. Thank you.</p></div>
+</div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/lga.js"></script>
+<script src="js/app.js"></script>
+</body></html>
